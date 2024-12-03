@@ -37,7 +37,7 @@
     </style>
 </head>
 <body>
-    <h1>Computation Concepts and Techniques</h1>
+    <h1>Algorithms concept</h1>
     <section>
         <h2>1. Problems in Nature (Iteration, Recursion, Backtracking)</h2>
         <h3>Iteration</h3>
@@ -119,44 +119,70 @@ It is efficient in data updation, handling of dynamic data.
             <li><b>1.Range query:</b>Sum, max, min in a sub array can be calculated efficiently</li> 
             <li><b>2.Dynamic updates:</b>Incrementing values in a range or updating specific elements.</li>
             <li>3.Also it matches the sequence using patterns and it is also used in Graph algorithms for example to find shortest path in Dijkstra</li>
-            <l>It follows the design principles of </l>
-            <l>•Pre-computation: computes and store results of queried data in advance</l>
-            <l>•Divide and conquer: Break the array into smaller subarrays to solve queries</l>
-            <l>•Sliding Window: maintains window of useful data while traversing the array</l>
-            <l>•Dynamic programming: uses previous solutions to compute subproblems.</l>
-            <l>•Lazy propagation: Delays updates until necessary</l>
-            <l>It gives improved performance, optimised resource utilization, wide applicability and scalability.</l>
+            <li>It follows the design principles of </li>
+            <li>•Pre-computation: computes and store results of queried data in advance</li>
+            <li>•Divide and conquer: Break the array into smaller subarrays to solve queries</li>
+            <li>•Sliding Window: maintains window of useful data while traversing the array</li>
+            <li>•Dynamic programming: uses previous solutions to compute subproblems.</li>
+            <li>•Lazy propagation: Delays updates until necessary</li>
+            <li>It gives improved performance, optimised resource utilization, wide applicability and scalability.</li>
         </ul>
     </section>
     <section>
-        <h2>6.Differentiate between tree and graphs and their traversals. The applications of each</h2>
+        <h>6.Differentiate between tree and graphs and their traversals. The applications of each</h>
         <ul>
             <h2>Tree</h2>
-            <l>Tree is a hierarchical data structure with nodes connected by edge
-and no cycles. It always has a single root node and each child has exactly one parent.
-</l>
-            <li><b>Graph:</b> General structure, cycles possible, multiple paths between nodes.</li>
+            <li>Tree is a hierarchical data structure with nodes connected by edgeand no cycles. It always has a single root node and each child has exactly one parent.</li>
+            <li>In tree traversal there is only one unique path between any two nodes.</li>
+            <li>Traversal is done using Pre, In, Post-order traversals.</li>
+            <h2>Graphs</h2>
+            <li>Graph is a collection of vertices connected by edges which may form cycles. It does not have a root node any node can be a starting point</li>
+            <li>In graph traversal multiple paths may exist between nodes.</li>
+            <li>Traversals are done using DFS and BFS</li>
+            <h2>Applications:</h2>
+            <li>Trees are used in BST, heaps, tries etc.</li>
+            <li>Graphs are used in social networks, Web graphs	</li>
         </ul>
-        <p>Applications: Trees in BST, heaps; Graphs in networks, social graphs.</p>
+        
     </section>
     <section>
-        <h2>7. Sorting and Searching Algorithms</h2>
-        <h3>Sorting Techniques:</h3>
+        <h>7. Deliberate on sorting and searching algorithms, the technique behind each and they connect to real worlds</h>
+        <h1>Sorting Techniques:</h1>
         <ul>
-            <li>Bubble Sort, Selection Sort, Insertion Sort: Simple but inefficient for large data.</li>
-            <li>Merge Sort, Quick Sort, Heap Sort: Efficient for large datasets.</li>
+            <li><b>1.Bubble Sort:</b>Simple but inefficient (O(n²)), used for small datasets.</li>
+            <li><b>2.Selection Sort:</b>Places elements in sorted order by repeatedly selecting the smallest/largest (O(n²)).</li>
+            <li><b>3.Insertion Sort:</b>Efficient for nearly sorted data (O(n²)).</li>
+            <li><b>4.Merge Sort:</b>Divides data recursively, then merges (O(n log n)).</li>
+            <li><b>5.Quick Sort:</b>Uses partitioning for fast sorting (O(n log n), worst-case O(n²)).</li>
+            <li><b>6.Heap Sort:</b>Employs a heap for sorting (O(n log n), in-place).</li>
         </ul>
-        <h3>Searching Techniques:</h3>
+         <section>
+        <h2>Searching Algorithms</h2>
         <ul>
-            <li>Linear Search: Sequential checks.</li>
-            <li>Binary Search: Efficient in sorted arrays.</li>
+            <li><strong>Linear Search:</strong> Checks each element sequentially.</li>
+            <li><strong>Binary Search:</strong> Efficiently finds an element in a sorted array by halving the search range.</li>
         </ul>
-        <h3>Graph Algorithms:</h3>
+    </section>
+
+    <section>
+        <h2>Graph Algorithms</h2>
+        <p>Graph algorithms deal with problems involving graphs like finding shortest paths, spanning trees, and connectivity.</p>
         <ul>
-            <li>Dijkstra's: Shortest path from source to all nodes.</li>
-            <li>Prim's: Minimum Spanning Tree.</li>
+            <li><strong>Dijkstra's Algorithm:</strong> Finds the shortest path from a source node to all other nodes.</li>
+            <li><strong>Floyd-Warshall Algorithm:</strong> Calculates shortest paths between all pairs of nodes.</li>
+            <li><strong>Prim's Algorithm:</strong> Finds the Minimum Spanning Tree (MST) of a graph.</li>
+            <li><strong>Union-Find:</strong> Detects connected components.</li>
+            <li><strong>Shortest Path:</strong> Finds the minimum path between nodes (e.g., Dijkstra’s, Bellman-Ford).</li>
+            <li><strong>Spanning Trees:</strong> Optimizes network design (e.g., Prim’s, Kruskal’s).</li>
         </ul>
-        <p>Applications: Sorting/Searching in e-commerce, Graphs in logistics and navigation.</p>
+    </section>
+
+    <section>
+        <h2>Real-World Applications</h2>
+        <ul>
+            <li><strong>Sorting/Searching:</strong> Used in databases, scheduling, and e-commerce.</li>
+            <li><strong>Graph Algorithms:</strong> Essential for navigation, network optimization, and logistics.</li>
+        </ul>
     </section>
 </body>
 </html>
