@@ -3,123 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Computation and Algorithms</title>
+    <title>Computation Concepts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+        }
+        ul {
+            margin-left: 20px;
+            padding-left: 0;
+        }
+        li {
+            list-style-type: disc;
+            margin-bottom: 10px;
+        }
+        section {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
 <body>
-    <h1>1. Problems in Nature (Iteration, Recursion, Backtracking)</h1>
-    <h2>Iteration</h2>
-    <p>Ecosystem Cycles, Population Dynamics, Nature patterns</p>
-    <h2>Recursion</h2>
-    <p>Mountains, river networks, and exhibit self-similarity, Fibonacci Sequence, Cell Division</p>
-    <h2>Backtracking</h2>
-    <p>Backtracking is used to solve puzzles like Sudoku, crosswords, and word searches, Maze Solving etc.</p>
-
-    <h1>2. Space and Time Complexity</h1>
-    <h2>Space Complexity</h2>
-    <p>Measures the memory required by an algorithm.<br>
-    Importance: Optimize computational resources (memory and time).</p>
-    <h2>Time Complexity</h2>
-    <p>Measures how execution time grows with input size.<br>
-    Importance: Ensure scalability for large inputs in real-world applications.</p>
-    <ul>
-        <li>Constant O(1): Accessing array elements.</li>
-        <li>Logarithmic O(log n): Binary search.</li>
-        <li>Linear O(n): Single-pass algorithms.</li>
-        <li>Quadratic O(n²): Nested loops like Bubble Sort.</li>
-        <li>Exponential O(2ⁿ): Recursive algorithms like the Tower of Hanoi.</li>
-    </ul>
-    <p><strong>Criteria to evaluate the effectiveness of a solution:</strong> Evaluate based on correctness, time complexity, space efficiency.</p>
-
-    <h1>3. Takeaway from Different Design Principles from Chapter 2</h1>
-    <p>The concepts and techniques discussed here form the foundation of computational thinking and algorithm design. They demonstrate how complex problems can be tackled through systematic approaches, efficiency improvements.</p>
-    <h2>1. Decomposition</h2>
-    <p>Breaking down a large, complex problem into smaller, more manageable sub-problems.<br>
-    <strong>Reflection:</strong> Simplifies complexity, making the overall problem easier to solve efficiently.</p>
-    <h2>2. Pattern Recognition</h2>
-    <p>Identifying recurring patterns or similarities within a problem, enabling generalizations and predictions.</p>
-    <h2>3. Abstraction</h2>
-    <p>Simplifies complex systems by focusing on essential features and ignoring irrelevant details.</p>
-    <h2>4. Brave and Cautious Travel</h2>
-    <p>Brave traversal involves moving until a dead end and backtracking step by step (DFS).<br>
-    Cautious traversal progresses level by level (BFS).</p>
-    <h2>5. Pruning</h2>
-    <p>Eliminates unnecessary parts of a problem to improve efficiency, such as in the N-Queen’s problem, saving time and space.</p>
-    <h2>6. Lazy Propagation/Evaluation</h2>
-    <p>Optimizes performance in data structures like segment trees by deferring updates until necessary.</p>
-    <h2>7. Sliding Window</h2>
-    <p>Analyzes overlapping sub-arrays or sub-sequences by maintaining relevant information from previous windows.</p>
-    <h2>8. Level Order Traversal</h2>
-    <p>Systematically explores tree nodes level by level, directly related to BFS traversal in graphs.</p>
-    <h2>9. Hierarchical Data</h2>
-    <p>Hierarchical data structures like family trees organize information in parent-child relationships.</p>
-    <h2>10. Edge Relaxation</h2>
-    <p>Key in shortest-path algorithms; updates the shortest known distance to a vertex through neighbors.</p>
-    <h2>11. Balancing and Rotations</h2>
-    <p>Maintains efficiency in tree-based data structures by preventing skewed trees (e.g., AVL, Red-Black trees).</p>
-    <h2>12. Kleene Closure</h2>
-    <p>Determines relationships between graph elements, aiding in shortest path algorithms and social network analysis.</p>
-    <h2>13. Pre-Computing</h2>
-    <p>Enhances performance by calculating and storing frequently used results in advance.</p>
-    <h2>14. Parental Dominance</h2>
-    <p>Ensures hierarchical efficiency in data structures like heaps, critical for priority queuing and sorting.</p>
-    <h2>15. Prefix and Suffix</h2>
-    <p>Used in pattern matching and string operations like searching, bioinformatics, and NLP.</p>
-    <h2>16. Partitioning</h2>
-    <p>Divides problems into smaller sub-problems for recursive solving, enhancing efficiency.</p>
-    <h2>17. Bit Manipulations</h2>
-    <p>Optimizes memory and computation with operations like AND, OR, XOR, and shifting.</p>
-    <h2>18. Memoization</h2>
-    <p>Optimizes recursive algorithms by storing previously computed results, central to dynamic programming.</p>
-    <h2>19. Invariants</h2>
-    <p>Conditions that remain constant during program execution, essential for debugging and testing.</p>
-    <h2>20. Shortest Path Trees</h2>
-    <p>Illustrates shortest routes from a starting node to all others, foundational in navigation and routing.</p>
-
-    <h1>4. Hierarchical Data and Optimized Tree Data Structures</h1>
-    <ul>
-        <li><strong>Trees:</strong> Hierarchical organization and efficient traversals, costly in unbalanced conditions.</li>
-        <li><strong>Binary Search Tree:</strong> Facilitates searching, insertion, deletion; can become unbalanced.</li>
-        <li><strong>AVL Trees:</strong> Self-balancing binary search tree using rotations, increased stack overhead.</li>
-        <li><strong>2-3 Trees:</strong> Ensures leaves are at the same level, supports efficient operations.</li>
-        <li><strong>Red-Black Trees:</strong> Ensures approximately balanced height, maintaining O(log n).</li>
-        <li><strong>Heap:</strong> Used in priority queues and graph algorithms, time-consuming rebalancing.</li>
-        <li><strong>Trie:</strong> Prefix tree for efficient string storage, used in dictionary, autocomplete, etc.</li>
-    </ul>
-
-    <h1>5. Need of Array Query Algorithms and Their Applications</h1>
-    <p>Efficiently solve problems involving queries and updating array data.</p>
-    <ul>
-        <li>Range Query: Efficient calculation of sum, max, min in subarrays.</li>
-        <li>Dynamic Updates: Incrementing values or updating specific elements.</li>
-        <li>Used in graph algorithms (e.g., Dijkstra’s).</li>
-    </ul>
-
-    <h1>6. Differentiation Between Trees and Graphs</h1>
-    <p><strong>Trees:</strong> Hierarchical structure, unique paths between nodes, traversal via Pre, In, Post-order.<br>
-    <strong>Graphs:</strong> Vertices connected by edges, may form cycles, traversal via DFS, BFS.</p>
-
-    <h1>7. Sorting and Searching Algorithms</h1>
-    <h2>Sorting Techniques:</h2>
-    <ul>
-        <li>Bubble Sort: O(n²), for small datasets.</li>
-        <li>Selection Sort: O(n²), repeatedly selects smallest/largest.</li>
-        <li>Insertion Sort: O(n²), efficient for nearly sorted data.</li>
-        <li>Merge Sort: O(n log n), recursive division and merging.</li>
-        <li>Quick Sort: O(n log n), partitioning (worst-case O(n²)).</li>
-        <li>Heap Sort: O(n log n), employs a heap.</li>
-    </ul>
-    <h2>Searching Algorithms:</h2>
-    <ul>
-        <li>Linear Search: Sequential checks.</li>
-        <li>Binary Search: Efficient for sorted arrays, halves the search range.</li>
-    </ul>
-    <h2>Graph Algorithms:</h2>
-    <ul>
-        <li>Dijkstra's Algorithm: Shortest path from a source node.</li>
-        <li>Floyd-Warshall: Shortest paths between all pairs of nodes.</li>
-        <li>Prim's Algorithm: Minimum Spanning Tree (MST).</li>
-        <li>Union-Find: Detects connected components.</li>
-    </ul>
-    <p><strong>Real-World Applications:</strong> Sorting/Searching in databases, scheduling, e-commerce; Graph algorithms in navigation, logistics.</p>
+    <h1>Computation Concepts and Techniques</h1>
+    <section>
+        <h2>1. Problems in Nature (Iteration, Recursion, Backtracking)</h2>
+        <h3>Iteration</h3>
+        <p>Ecosystem Cycles, Population Dynamics, Nature patterns</p>
+        <h3>Recursion</h3>
+        <p>Mountains, river networks, and exhibit self-similarity, Fibonacci Sequence, Cell Division</p>
+        <h3>Backtracking</h3>
+        <p>Backtracking is used to solve puzzles like Sudoku, crosswords, and word searches, Maze Solving, etc.</p>
+    </section>
+    <section>
+        <h2>2. Space and Time Complexity</h2>
+        <h3>Space Complexity</h3>
+        <p>Measures the memory required by an algorithm.</p>
+        <p><b>Importance:</b> Optimize computational resources (memory and time).</p>
+        <h3>Time Complexity</h3>
+        <p>Measures how execution time grows with input size.</p>
+        <p><b>Importance:</b> Ensure scalability for large inputs in real-world applications.</p>
+        <h3>Orders of Growth:</h3>
+        <ul>
+            <li>Constant O(1): Accessing array elements.</li>
+            <li>Logarithmic O(log n): Binary search.</li>
+            <li>Linear O(n): Single-pass algorithms.</li>
+            <li>Quadratic O(n²): Nested loops like Bubble Sort.</li>
+            <li>Exponential O(2ⁿ): Recursive algorithms like the Tower of Hanoi.</li>
+        </ul>
+        <p><b>Criteria to Evaluate Solution Effectiveness:</b> Evaluate based on correctness, time complexity, space efficiency.</p>
+    </section>
+    <section>
+        <h2>3. Takeaways from Different Design Principles</h2>
+        <p>The concepts and techniques discussed here form the foundation of computational thinking and algorithm design. They demonstrate how complex problems can be tackled through systematic approaches and efficiency improvements.</p>
+        <h3>Key Design Principles:</h3>
+        <ul>
+            <li><b>Decomposition:</b> Breaking down a large, complex problem into smaller, more manageable sub-problems.</li>
+            <li><b>Pattern Recognition:</b> Identifying recurring patterns or similarities within a problem.</li>
+            <li><b>Abstraction:</b> Simplifying complex systems by focusing on essential features.</li>
+            <li><b>Brave and Cautious Travel:</b> DFS and BFS traversal techniques.</li>
+            <li><b>Pruning:</b> Eliminates unnecessary parts of a problem (e.g., N-Queen's problem).</li>
+            <li><b>Lazy Propagation:</b> Optimizes performance in data structures by deferring updates.</li>
+            <li><b>Sliding Window:</b> Efficient analysis of overlapping subarrays or subsequences.</li>
+            <li><b>Level Order Traversal:</b> Systematically explores tree nodes level by level.</li>
+            <li><b>Hierarchical Data:</b> Organizes information in parent-child relationships.</li>
+            <li><b>Edge Relaxation:</b> Key in shortest-path algorithms.</li>
+            <li><b>Balancing and Rotations:</b> Maintains efficiency in tree-based data structures.</li>
+            <li><b>Kleene Closure:</b> Relates to transitivity in automata and graph theory.</li>
+            <li><b>Pre-Computing:</b> Enhances performance by pre-calculating results.</li>
+            <li><b>Parental Dominance:</b> Ensures hierarchical efficiency in data structures like heaps.</li>
+            <li><b>Prefix and Suffix:</b> Used in pattern matching and string operations.</li>
+            <li><b>Partitioning:</b> Divides problems into smaller sub-problems.</li>
+            <li><b>Bit Manipulations:</b> Optimizes memory and computation through binary operations.</li>
+            <li><b>Memoization:</b> Optimizes recursive algorithms by storing results.</li>
+            <li><b>Invariants:</b> Conditions that remain constant during execution.</li>
+            <li><b>Shortest Path Trees:</b> Foundational in navigation, routing, and network optimization.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>4. Hierarchical Data and Tree Structures</h2>
+        <p><b>Trees:</b> Hierarchical data organization, base for upcoming optimizations.</p>
+        <ul>
+            <li><b>Binary Search Tree:</b> Efficient searching, insertion, deletion.</li>
+            <li><b>AVL Trees:</b> Self-balancing BST with single/double rotations.</li>
+            <li><b>2-3 Trees:</b> Ensures balanced height; efficient searching.</li>
+            <li><b>Red-Black Trees:</b> Color-based balanced BST.</li>
+            <li><b>Heap:</b> Priority queue implementation, used in graph algorithms.</li>
+            <li><b>Trie:</b> Efficient prefix-based data storage.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>5. Array Query Algorithms and Implications</h2>
+        <p>Efficient for solving problems involving queries and data updates.</p>
+        <ul>
+            <li>Applications: Range queries, dynamic updates, pattern matching.</li>
+            <li>Principles: Pre-computation, divide and conquer, sliding window, lazy propagation.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>6. Tree vs. Graph and Traversals</h2>
+        <ul>
+            <li><b>Tree:</b> Hierarchical, no cycles, unique path between nodes.</li>
+            <li><b>Graph:</b> General structure, cycles possible, multiple paths between nodes.</li>
+        </ul>
+        <p>Applications: Trees in BST, heaps; Graphs in networks, social graphs.</p>
+    </section>
+    <section>
+        <h2>7. Sorting and Searching Algorithms</h2>
+        <h3>Sorting Techniques:</h3>
+        <ul>
+            <li>Bubble Sort, Selection Sort, Insertion Sort: Simple but inefficient for large data.</li>
+            <li>Merge Sort, Quick Sort, Heap Sort: Efficient for large datasets.</li>
+        </ul>
+        <h3>Searching Techniques:</h3>
+        <ul>
+            <li>Linear Search: Sequential checks.</li>
+            <li>Binary Search: Efficient in sorted arrays.</li>
+        </ul>
+        <h3>Graph Algorithms:</h3>
+        <ul>
+            <li>Dijkstra's: Shortest path from source to all nodes.</li>
+            <li>Prim's: Minimum Spanning Tree.</li>
+        </ul>
+        <p>Applications: Sorting/Searching in e-commerce, Graphs in logistics and navigation.</p>
+    </section>
 </body>
 </html>
